@@ -64,6 +64,6 @@ License
 --
 
 
-Assembly manual, pictures, videos, presentations, description text and other type of media are released under the following license:
+Assembly manual, pictures, description text and other type of files are released under the following license:
 
 - **[GPLv3](LICENSE_CC_BY_SA_4.0.txt)**
