@@ -12,9 +12,5 @@
   "devDependencies": {
     "gh-pages": "^6.1.0"
   },
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
   "homepage": "https://licash.github.io/online-documentation/"
 }
