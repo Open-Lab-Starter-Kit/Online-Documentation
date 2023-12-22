@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "3.0",
@@ -22,5 +24,6 @@
     "react-scripts": "5.0",
     "three": "^0.148.0",
     "vite-plugin-glsl": "^1.1.2"
-  }
+  },
+  "homepage": "https://licash.github.io/online-documentation/"
 }
