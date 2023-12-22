@@ -1,0 +1,195 @@
+#root {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid black;
+    color: rgb(0, 0, 0);
+    /* White text */
+    padding: 8px 10px;
+    /* Some padding */
+    font-size: 15px;
+    /* Set a font size */
+    font-family: Barlow;
+    cursor: pointer;
+    /* Mouse pointer on hover */
+    width: auto;
+}
+
+.btn:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.stepNaviBtn {
+    background-color: rgb(255, 255, 255);
+    border: 0px solid black;
+    color: rgb(0, 0, 0);
+    /* White text */
+    padding: 8px 10px;
+    /* Some padding */
+    font-size: 15px;
+    /* Set a font size */
+    font-family: Barlow;
+    cursor: pointer;
+    /* Mouse pointer on hover */
+    width: auto;
+    text-align: left;
+}
+
+.stepNaviBtn:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.active {
+    background-color: #000000;
+    color: white;
+}
+
+#previousStep {
+    display: none;
+}
+
+.viewArea {
+    margin-left: 180px;
+    position: absolute;
+    display: block;
+    float: right;
+    width: 70%;
+    height: 100%;
+    padding: 10px;
+}
+
+#partsOut {
+    position: absolute;
+
+    /*  display: none; */
+
+    top: 20px;
+    right: 20px;
+}
+
+
+.infoColumn {
+    display: flex;
+    position: absolute;
+    flex: 0.5;
+    float: left;
+    width: 170px;
+    height: 100%;
+    overflow: auto;
+
+}
+
+#stepNavi {
+    position: fixed;
+    flex: 1;
+    left: 0px;
+    width: 160px;
+    height: 100%;
+    overflow: auto;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.stepNaviClass {
+    font-family: Barlow;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+h2 {
+    margin: 0px;
+    float: left;
+}
+
+
+.topnav {
+    display: inline;
+    float: right;
+    overflow: hidden;
+    font-family: Barlow;
+    font-size: medium;
+    color: rgb(0, 0, 0);
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    border-bottom-style: solid;
+    border-bottom-color: #000000;
+    border-width: 2px;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+.navBar {
+    display: block;
+    width: 100%;
+}
+
+.navLogo {
+    float: left;
+    height: 25px;
+}
+
+.Title {
+    text-align: center;
+    font-family: Barlow;
+    font-size: 30px;
+}
+
+
+#stepTitleArea {
+    font-family: Barlow;
+    font-size: 22px;
+}
+
+#stepControl {
+    position: relative;
+    display: block;
+    float: right;
+    font-family: Barlow;
+    font-size: medium;
+}
+
+#currentStepArea {
+    margin-left: 160px;
+
+
+}
+
+#stepPartsArea {
+    font-family: Barlow;
+    font-size: medium;
+}
