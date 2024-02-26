@@ -1,11 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
 #root {
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: fixed;
 }
 
+/* #renderWindow {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+} */
+.header {
+    display: block;
+}
 
 .btn {
     background-color: rgba(255, 255, 255, 0.7);
@@ -20,6 +38,7 @@
     cursor: pointer;
     /* Mouse pointer on hover */
     width: auto;
+    margin-right: 10px;
 }
 
 .btn:hover {
@@ -39,11 +58,38 @@
     font-family: Barlow;
     cursor: pointer;
     /* Mouse pointer on hover */
-    width: auto;
+    width: 100%;
     text-align: left;
 }
 
 .stepNaviBtn:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.stepNaviBtn:active {
+    background-color: #3e3e3e;
+    color: white;
+}
+
+.hamburger {
+    border: 1;
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    border-radius: 00%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.hamburger:hover {
     background-color: #000000;
     color: white;
 }
@@ -53,18 +99,12 @@
     color: white;
 }
 
-#previousStep {
-    display: none;
-}
 
-.viewArea {
-    margin-left: 180px;
-    position: absolute;
-    display: block;
-    float: right;
-    width: 70%;
+.appArea {
+    /*    display: block;
+ */
+    margin-top: 20px;
     height: 100%;
-    padding: 10px;
 }
 
 #partsOut {
@@ -78,33 +118,37 @@
 
 
 .infoColumn {
-    display: flex;
+    display: block;
     position: absolute;
     flex: 0.5;
     float: left;
-    width: 170px;
-    height: 100%;
+    width: 200px;
+    height: calc(100% - 113px);
     overflow: auto;
 
 }
 
-#stepNavi {
+.stepNavi {
     position: fixed;
     flex: 1;
     left: 0px;
-    width: 160px;
-    height: 100%;
     overflow: auto;
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: calc(100% - 76px);
+
 }
 
-.stepNaviClass {
+.stepNavi ul {
+    overflow: auto;
+}
+
+.stepNavi li {
     font-family: Barlow;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    height: 100%;
     overflow: auto;
 }
 
@@ -113,62 +157,94 @@ h2 {
     float: left;
 }
 
-
-.topnav {
-    display: inline;
+.navMenu {
+    margin-left: auto;
+    /*     display: inline;
     float: right;
     overflow: hidden;
     font-family: Barlow;
     font-size: medium;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0); */
+}
+
+.navMenu ul {
+    display: flex;
+    padding: 0;
+}
+
+.navMenu li {
+    list-style-type: none;
+    margin: 0 0.5rem;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
+.navMenu li a {
+    /*     float: left;
+            display: inline; */
+    text-decoration: none;
     display: block;
+    width: 100%;
     color: #000000;
     text-align: center;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 17px;
     background-color: transparent;
+
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+.navMenu li a:hover {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 }
 
 /* Add an active class to highlight the current page */
-.topnav a.active {
+.navMenu li a.active {
     border-bottom-style: solid;
     border-bottom-color: #000000;
     border-width: 2px;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+.navMenu .icon {
     display: none;
 }
 
-.navBar {
-    display: block;
-    width: 100%;
-}
 
 .navLogo {
-    float: left;
     height: 25px;
+    /*     float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
 .Title {
     text-align: center;
+    align-self: center;
+    margin-left: 80px;
     font-family: Barlow;
     font-size: 30px;
+    display: flex;
+    overflow: hidden;
 }
 
+/* #info {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    display: block;
+}
+ */
+.currentStepBar {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+}
 
 #stepTitleArea {
     font-family: Barlow;
@@ -183,13 +259,61 @@ h2 {
     font-size: medium;
 }
 
-#currentStepArea {
-    margin-left: 160px;
+#previousStep {
+    display: none;
+}
 
+.viewArea {
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    width: calc(100% - 210px);
+    height: 100%;
+    padding: 10px;
+}
+
+#currentStepArea {
+    margin-left: 220px;
+    /*     display: block; */
+    margin-right: 20px;
+    height: calc(100% - 150px);
+}
+
+.stepPartsArea {
+    margin-top: 10px;
+    display: block;
+    font-family: Barlow;
+    font-size: medium;
+}
+
+.stepRemarksArea {
+    margin-top: 30px;
+    display: block;
+    font-family: Barlow;
+    font-size: medium;
+}
+
+.stepRemarksArea li {
+    padding-bottom: 10px;
 
 }
 
-#stepPartsArea {
-    font-family: Barlow;
-    font-size: medium;
+/* Media queries for responsiveness */
+@media screen and (max-width: 680px) {
+    .navMenu ul {
+        display: none;
+    }
+
+    .Title {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+    }
 }
