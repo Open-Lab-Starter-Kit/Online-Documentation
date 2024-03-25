@@ -13,6 +13,7 @@ The documentation of the Open Lab Starter Kit machines is currently under develo
 Pre-alpha version
 --
 
+- **[Online Preview](https://open-lab-starter-kit.github.io/Online-Documentation/)**
 - **[Pre-alpha version 1](Online_Documentation_vPre1)**
 
 Installation: 
