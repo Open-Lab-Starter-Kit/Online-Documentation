@@ -67,4 +67,4 @@ License
 
 Assembly manual, pictures, description text and other type of files are released under the following license:
 
-- **[GPLv3](LICENSE_CC_BY_SA_4.0.txt)**
+- **[GPLv3](LICENSE.txt)**
